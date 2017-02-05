@@ -1,1 +1,3 @@
 # AudioLib
+
+Aplikacja ma ułatwiać katalogowanie audiobooków jakie posiadam na dysku. Ponieważ jest tego dużo a znaczna część jeszcze nie zostałą przeze mnie przesłuchana chciałbym mieć możliwość łatwego przeglądania ich, wyszukiwania po różnych parametrach oraz móc z pomocą tej aplikacji kopiować je na swoje urządzenie do słuchania. Chciałbym również po przesłuchaniu mieć możliwość ocenienia audiobooka oraz widzieć które już przesłuchałem a których jeszcze nie. Nie kasuje ich z dysku ponieważ te najlepsze lubię odsłuchiwać nie jeden raz a także chciałbym mieć możliwość zaopiniowania tych audiobooków moim znajomym.
