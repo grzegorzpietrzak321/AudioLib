@@ -1,0 +1,15 @@
+﻿1. Aplikacja służy do katalogowania audiobooków na dysku 
+	Ma ułatwiać odnajdywanie interesujących nas audiobooków po różnych parametrach: 
+	autor, tytuł, typ literatury, rodzaj lektora i innych
+
+2. Aplikacja wyświetla listę audiobooków jakie ma dostępne w swojej bazie
+
+3. Użytkownik ma możliwość dodania (zaimportowania) nowych audiobooków do swojej bazy
+
+4. Użytkownik ma możliwość wyeksportowania audiobooka do innej lokalizacji (urządzenie, dysk)
+
+5. Użytkownik może edytować dane związane z audiobookiem: tytuł, autor, typ lit czy lektor oraz innych
+
+6. Użytkownik może usunąć audiobooka z bazy
+
+7. 
