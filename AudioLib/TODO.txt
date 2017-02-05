@@ -14,4 +14,4 @@
 
 6. Użytkownik może usunąć audiobooka z bazy
 
-7. 
+7. Aplikacja podczas importu książki sprawdza jaki jest czas trwania audiobooka (na podstawie tego parametru również można wyszukać: najkrótsze, najdłuższe)
