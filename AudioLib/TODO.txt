@@ -3,6 +3,8 @@
 	autor, tytuł, typ literatury, rodzaj lektora i innych
 
 2. Aplikacja wyświetla listę audiobooków jakie ma dostępne w swojej bazie
+	a. dynamiczne wyszukiwanie np: tytuł lub autor (przy każdym naciśnięciu kolejnego klawisza aplikacja ponownie wyszukuje tekst znajdujący się w textBoxie)
+	b. wyszukiwanie na podstawie typu literatury lub rodzaju lektora
 
 3. Użytkownik ma możliwość dodania (zaimportowania) nowych audiobooków do swojej bazy
 
