@@ -11,7 +11,6 @@ namespace AudioLib.Actions
         {
             object obj = JsonConvert.SerializeObject(jsonString);
 
-
             return (T)obj;
         }
 
