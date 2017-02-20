@@ -3,10 +3,68 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:AudioLib"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="AudioLib" Height="444" Width="667.667">
+    <Viewbox x:Name="Glowny" HorizontalAlignment="Left" Margin="0,0,0,0" Visibility="Visible">
+        <Grid Margin="0,0,2,0">
+            <Button x:Name="BtnImport" Margin="6,10,0,0" VerticalAlignment="Top" Height="48" HorizontalAlignment="Left" Width="123" Content="Import" Click="btnImportAudiobook_Click"/>
+
+            <DataGrid Name="AudiobookListView"  ItemsSource="{Binding Path=audiobooks, NotifyOnTargetUpdated=True, UpdateSourceTrigger=PropertyChanged}" AutoGenerateColumns="False" Margin="6,63,13,10">
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Header="Tytuł"  IsReadOnly="False">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Path=Title}"></TextBlock>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Autor" IsReadOnly="False">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBox Text="{Binding Path=Author}"></TextBox>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Cykl" IsReadOnly="False">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBox Text="{Binding Path=Storyline}"></TextBox>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Lektor" IsReadOnly="False">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBox Text="{Binding Path=VoiceType}"></TextBox>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Ocena" IsReadOnly="False">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBox Text="{Binding Path=Rank}"></TextBox>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <!--<DataGrid x:Name="dataGrid" Margin="10,63,13,10" ItemsSource="{Binding Source=audiobooks}" VerticalScrollBarVisibility="Visible">
+
+        </DataGrid> -->
+
+
+            <Button x:Name="BtnEditMetadata" Content="Edycja metadanych" HorizontalAlignment="Left" Margin="134,10,0,0" VerticalAlignment="Top" Width="124" Height="48" Click="btnEditMetadata_Click" />
+            <Button x:Name="BtnExportOnDevice" Content="Eksport &#xD;&#xA;na urządzenie" HorizontalAlignment="Left" Margin="264,10,0,0" VerticalAlignment="Top" Width="123" Height="48" Click="BtnExportOnDevice_Click"/>
+            <Button x:Name="BtnRemove" Content="Usuń" HorizontalAlignment="Left" Margin="392,10,0,0" VerticalAlignment="Top" Width="123" Height="48" Click="btnRemove_Click"/>
+            <Button x:Name="BtnPlay" Content="Odtwarzanie" HorizontalAlignment="Left" Margin="521,10,0,0" VerticalAlignment="Top" Width="123" Height="48" Click="BtnPlay_Click" />
+        </Grid>
+    </Viewbox>
+
+    <!-- <Viewbox x:Name="Dodatkowy" HorizontalAlignment="Left" Height="288" Margin="245,105,0,0" VerticalAlignment="Top" Width="345" Visibility="Visible">
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="0,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="92"/>
+        <Label x:Name="Label" Margin="0,0,0,0" Visibility="Visible" />
+    </Viewbox> -->
+
+
 </Window>

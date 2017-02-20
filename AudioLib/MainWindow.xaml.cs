@@ -24,5 +24,30 @@ namespace AudioLib
         {
             InitializeComponent();
         }
+
+        private void btnImportAudiobook_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnEditMetadata_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnExportOnDevice_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnRemove_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnPlay_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
