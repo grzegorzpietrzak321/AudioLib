@@ -10,11 +10,12 @@ namespace AudioLib
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
         private void btnImportAudiobook_Click(object sender, RoutedEventArgs e)
         {
-
+            //TODO można zrobić wygaszanie poszczególnych elementów a pojawianie się właściwych po kliknięciu przycisku
         }
 
         private void btnEditMetadata_Click(object sender, RoutedEventArgs e)

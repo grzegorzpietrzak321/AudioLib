@@ -6,58 +6,106 @@
         mc:Ignorable="d"
         Title="AudioLib" Height="444" Width="667.667">
     <Viewbox x:Name="Glowny" HorizontalAlignment="Left" Margin="0,0,0,0" Visibility="Visible">
-        <Grid Margin="0,0,2,0">
-            <Button x:Name="BtnImport" Margin="6,10,0,0" VerticalAlignment="Top" Height="48" HorizontalAlignment="Left" Width="123" Content="Import" Click="btnImportAudiobook_Click"/>
-
-            <DataGrid Name="AudiobookListView"  ItemsSource="{Binding Path=audiobooks, NotifyOnTargetUpdated=True, UpdateSourceTrigger=PropertyChanged}" AutoGenerateColumns="False" Margin="6,63,13,10">
-                <DataGrid.Columns>
-                    <DataGridTemplateColumn Header="Tytuł"  IsReadOnly="False">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Path=Title}"></TextBlock>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="Autor" IsReadOnly="False">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBox Text="{Binding Path=Author}"></TextBox>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="Cykl" IsReadOnly="False">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBox Text="{Binding Path=Storyline}"></TextBox>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="Lektor" IsReadOnly="False">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBox Text="{Binding Path=VoiceType}"></TextBox>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="Ocena" IsReadOnly="False">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBox Text="{Binding Path=Rank}"></TextBox>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                </DataGrid.Columns>
-            </DataGrid>
+        <Grid Margin="0,0,2,0" Height="406">
+            <Button x:Name="BtnHome" Margin="0,3,0,0" VerticalAlignment="Top" Height="42" HorizontalAlignment="Left" Width="94" Click="btnImportAudiobook_Click" BorderBrush="{x:Null}" Background="{x:Null}">
+                <TextBlock>start.png</TextBlock>
+            </Button>
+            <StackPanel x:Name="PanelHome" Visibility="Visible" Margin="100,10,0,10">
+                <ListView  Margin="0,0,0,0" Height="385"></ListView>
+            </StackPanel>
+            <Button x:Name="BtnImport" Margin="0,53,0,0" VerticalAlignment="Top" Height="42" HorizontalAlignment="Left" Width="94" Click="btnImportAudiobook_Click" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Image Source="Pictures/import.png"/>
+            </Button>
+            <StackPanel x:Name="PanelImport" Visibility="Hidden" Margin="100,10,0,10">
+                
+            </StackPanel>
 
             <!--<DataGrid x:Name="dataGrid" Margin="10,63,13,10" ItemsSource="{Binding Source=audiobooks}" VerticalScrollBarVisibility="Visible">
 
         </DataGrid> -->
 
+            <Button x:Name="BtnEditMetadata" HorizontalAlignment="Left" Margin="0,106,0,0" VerticalAlignment="Top" Width="95" Height="42" Click="btnEditMetadata_Click" Background="{x:Null}" BorderBrush="{x:Null}">
+                <Image Source="Pictures/edycja.png"/>
+            </Button>
+            <StackPanel x:Name="PanelEditMetadata" Visibility="Hidden" Margin="100,10,0,10">
+                <Label></Label>
+            </StackPanel>
+            
+            <Button x:Name="BtnExportOnDevice"  HorizontalAlignment="Left" Margin="0,158,0,0" VerticalAlignment="Top" Width="94" Height="42" Click="BtnExportOnDevice_Click" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Image Source="Pictures/eksport.png"/>
+            </Button>
+            <StackPanel x:Name="PanelExport" Visibility="Hidden" Margin="100,10,0,10">
+                
+            </StackPanel>
+            
+            <Button x:Name="BtnRemove"  HorizontalAlignment="Left" Margin="0,211,0,0" VerticalAlignment="Top" Width="94" Height="42" Click="btnRemove_Click" Background="{x:Null}" BorderBrush="{x:Null}">
+                <Image Source="Pictures/usun.png"/>
+            </Button>
+            <StackPanel x:Name="PanelRemove" Visibility="Hidden" Margin="100,10,0,10">
+                
+            </StackPanel>
+            
+            
+            <Button x:Name="BtnPlay" HorizontalAlignment="Left" Margin="0,263,0,0" VerticalAlignment="Top" Width="94" Height="42" Click="BtnPlay_Click" BorderBrush="{x:Null}" Background="{x:Null}" >
+                <Image Source="Pictures/play.png"/>
+            </Button>
+            <StackPanel x:Name="PanelPlay" Visibility="Hidden" Margin="100,10,0,10">
+                
+            </StackPanel>
+            
+            
+            <Button x:Name="BtnSettings" HorizontalAlignment="Left" Margin="0,316,0,0" VerticalAlignment="Top" Width="94" Height="42" Click="BtnPlay_Click" Background="{x:Null}" BorderBrush="{x:Null}" >
+                <TextBlock>settings.png</TextBlock>
 
-            <Button x:Name="BtnEditMetadata" Content="Edycja metadanych" HorizontalAlignment="Left" Margin="134,10,0,0" VerticalAlignment="Top" Width="124" Height="48" Click="btnEditMetadata_Click" />
-            <Button x:Name="BtnExportOnDevice" Content="Eksport &#xD;&#xA;na urządzenie" HorizontalAlignment="Left" Margin="264,10,0,0" VerticalAlignment="Top" Width="123" Height="48" Click="BtnExportOnDevice_Click"/>
-            <Button x:Name="BtnRemove" Content="Usuń" HorizontalAlignment="Left" Margin="392,10,0,0" VerticalAlignment="Top" Width="123" Height="48" Click="btnRemove_Click"/>
-            <Button x:Name="BtnPlay" Content="Odtwarzanie" HorizontalAlignment="Left" Margin="521,10,0,0" VerticalAlignment="Top" Width="123" Height="48" Click="BtnPlay_Click" />
+            </Button>
+            <StackPanel x:Name="PanelSettings" Visibility="Hidden" Margin="100,10,0,10">
+                
+            </StackPanel>
+
+
+            <StackPanel HorizontalAlignment="Left" Height="396" Width="510" Margin="130,0,0,0" VerticalAlignment="Top" Visibility="Hidden" >
+                <DataGrid x:Name="AudiobookListView"  ItemsSource="{Binding audiobooks, NotifyOnTargetUpdated=True, UpdateSourceTrigger=PropertyChanged}" AutoGenerateColumns="False" Margin="0,0,0,0" Height="395">
+                    <DataGrid.Columns>
+                        <DataGridTemplateColumn Header="Tytuł"  IsReadOnly="False">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Title}"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Header="Autor" IsReadOnly="False">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBox Text="{Binding Author}"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Header="Cykl" IsReadOnly="False">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBox Text="{Binding Storyline}"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Header="Lektor" IsReadOnly="False">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBox Text="{Binding VoiceType}"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Header="Ocena" IsReadOnly="False">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBox Text="{Binding Rank}"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <StackPanel/>
+
+            </StackPanel>
         </Grid>
     </Viewbox>
 

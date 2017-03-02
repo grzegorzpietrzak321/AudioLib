@@ -15,7 +15,8 @@ namespace AudioLib.Actions
             throw new System.NotImplementedException();
         }
 
-        public List<Audiobook> GetAudiobooks(string author, string title, string genre, string year, string language, string voiceType)
+        public List<Audiobook> GetAudiobooks(string author, string title, string genre, string year, string language, string voiceType,
+            string rank)
         {
             throw new System.NotImplementedException();
         }

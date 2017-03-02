@@ -117,6 +117,14 @@
   <ItemGroup>
     <Resource Include="TODO.txt" />
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Pictures\edycja.png" />
+    <Resource Include="Pictures\eksport.png" />
+    <Resource Include="Pictures\import.png" />
+    <Resource Include="Pictures\play.png" />
+    <Resource Include="Pictures\usun.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -7,7 +7,7 @@ namespace AudioLib.Actions
     {
         List<Audiobook> GetAllAudiobooks();
         Audiobook GetAudiobook();
-        List<Audiobook> GetAudiobooks(string author, string title, string genre, string year, string language, string voiceType);
+        List<Audiobook> GetAudiobooks(string author, string title, string genre, string year, string language, string voiceType, string rank);
 
     }
 }
